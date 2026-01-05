@@ -5,15 +5,15 @@ This repository contains the **replication package** for the paper:
 > **An Empirical Evaluation of Tree Kernels for Source Code Retrieval**, to appear in *JSS*.
 
 The instructions below describe how to reproduce all experiments and results reported in the paper.
----
 
+---
 ## Repository Structure
 
 - `data/` – Datasets used in the experiments and derived artifacts (such as parsed code).
 - `code/` – Source code for all experiments.
 - `results/` – Outputs and evaluation metrics.
 
----
+
 ## Getting Started
 ### Step 1: Clone the Repository
 
@@ -22,11 +22,7 @@ git clone https://github.com/your-username/treekernel-jss2025.git
 cd treekernel-jss2025
 ```
 
----
-
-
-## Dataset (*data/` directory)
-
+## Dataset (`data/` directory)
 This folder includes the **BigCloneBench** dataset and derived artifacts:
 
 - `bcb_reduced/` – Java source files in the benchmark.
@@ -35,7 +31,6 @@ This folder includes the **BigCloneBench** dataset and derived artifacts:
 - `TestH2Database/` – Ground truth clone pairs stored in `bigclonedb_clones_alldir_8584153.txt`. Alternatively you can  download the ground truth file [here](https://drive.google.com/file/d/15N9kWtV4TMe-uxXcH0doi1Bbn3vbllbX/view?usp=sharing).
 - `checkstyle_complexity_all.csv` – McCabe's Cyclomatic Complexity scores, computed using [Checkstyle](https://checkstyle.sourceforge.io/checks/metrics/cyclomaticcomplexity.html).
 
----
 
 ## Experimental Code (`code/` directory)
 
@@ -46,7 +41,7 @@ All experimental code is organized by **research question (RQ)**:
 - **RQ3:** Performance across code fragments of varying size (LOC) and Cyclomatic Complexity.
 - **RQ4:** Hybrid retrieval model combining TF-IDF and tree kernels to reduce the runtime.
 
----
+
 
 ## Requirements
 
@@ -75,7 +70,6 @@ mvn clean compile
 mvn exec:java -Dexec.mainClass="sample.evaluation.elasticsearch.ESFileIndexer"
 ```
 
----
 
 ## Running the Experiments
 
